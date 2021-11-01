@@ -1,3 +1,4 @@
+let vang1;
 let conhece1, quenquen,quenquen1,fimGame,acertou1;
 let imagens = [];
 let tempo = 3600;
@@ -203,6 +204,7 @@ function fase1() {
 
 }
 function seErrar2(){
+  tempo = 3600
   background(imagens[14],255)
    if (ehPrimeiraEntradaNaTela()){
   musicSeErrar2.play()
@@ -212,6 +214,7 @@ function seErrar2(){
   
 }
 function SeErrar() {
+  tempo = 3600
   background(imagens[9], 255)
 
   if (ehPrimeiraEntradaNaTela()){
@@ -222,6 +225,7 @@ function SeErrar() {
 
 }
 function SeAcertar2(){
+  tempo = 3600
  // background(255,conhece1)
  image(conhece1,0,0,700,700)
        if (ehPrimeiraEntradaNaTela()){
@@ -231,6 +235,7 @@ function SeAcertar2(){
   
 }
 function SeAcertar() {
+  tempo = 3600
   background(imagens[10], 255)
        if (ehPrimeiraEntradaNaTela()){
      musicSeAcertar.play()
@@ -268,18 +273,18 @@ function TelaCreditos() {
   text("Créditos", 350, 90)
   fill(255)
   image(imagens[2], 20, 20, 100, 100)
-  image(imagens[4], 60, 200, 150, 150)
+  image(vang1, 60, 200, 150, 150)
   image(imagens[5], 60, 450, 150, 150)
   textSize(50)
-  text("Gabriel Paiva Cavalcante", 390, 190)
+  text("Thayná Cristina Vanglh Martins", 390, 190)
   textSize(38)
-  text("função: Orientador", 390, 220)
-  text("Mestrado e Doutorando em Geografia pela" + "\n" + "ufpb-universidade federal da paraíba", 419, 260)
+  text("função: Auxiliar de Dev", 390, 220)
+  text("Jovem Aprendiz pela CAMPus Pinheiros" + "\n" + "no cargo de Administração Hospitalar", 419, 260)
   textSize(50)
   text("Igor Santiago", 390, 430)
   textSize(38)
   text("função: Programador", 390, 470)
-  text("Estudante do Bacharelado em Ciências e" + "\n" + '  tecnologia pela UFRN- Universidade Federal' + '\n' + "do rio grande do Norte", 435, 520)
+  text("Estudante do Bacharelado em Ciências e" + "\n" + " Tecnologia e Engenharia Mecatrônica"+"\n"+" pela UFRN- Universidade Federal" + '\n' + "do Rio Grande do Norte", 435, 520)
 
 }
 
@@ -323,6 +328,7 @@ function preload() {
   quenquen = loadImage("imagem18.png")
   quenquen1 = loadSound("quenquen.mp3")
   acertou1 = loadSound("acertou.mp3")
+  vang1 = loadImage("vang.jpg")
 }
 
 function setup() {
@@ -504,7 +510,7 @@ function draw() {
       rect(270, 586, 160, 60, 15)
       if (mouseIsPressed) {
         if (mouseButton == LEFT) {
-          tela = 0
+          tela = 11
           music.stop()
         }
       }
